@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   ]
 
   spec.add_dependency "foobara", ">= 0.0.136", "< 2.0.0"
+  spec.add_dependency "foobara-http-api-command", "< 2.0.0"
 
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"
