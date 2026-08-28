@@ -1,34 +1,30 @@
 module Foobara
   module DiscordApi
     class CreateMessage < Foobara::Command
-      # class SomeError < RuntimeError
-      #   class << self
-      #     def context_type_declaration
-      #       { foo: :string }
-      #     end
-      #   end
-      # end
-
-      # possible_error SomeError
-
       inputs do
-        foo :string, default: "bar"
+        channel_id :string, :required
+        content :string, :required
       end
 
-      result :string
+      result Message
 
-      # depends_on SomeOtherCommand
+      include HttpApiCommand
 
-      def execute
-        do_something
-      end
+      base_url "https://discord.com/api"
+      path { "/channels/#{channel_id}/messages" }
+ 
+      def build_request_body
+        self.request_body = {
 
-      # def validate
-      #   add_runtime_error SomeError.new(message: "kaboom", context: {foo: :bar})
-      # end
+          content:
 
-      def do_something
-        foo
+          # tts: false,
+          # embeds: [{
+          #   title: "Hello, Embed!",
+          #   description: "This is an embedded message."
+          # }]
+
+        }
       end
     end
   end
