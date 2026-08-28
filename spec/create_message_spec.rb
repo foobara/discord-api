@@ -6,10 +6,15 @@ RSpec.describe Foobara::DiscordApi::CreateMessage do
   let(:errors_hash) { outcome.errors_hash }
 
   let(:inputs) do
-    { foo: "bar" }
+    { channel_id: , content: }
   end
 
-  it "is successful" do
+  let(:channel_id) { "1234567890" }
+  let(:content) { "Hello, World!" }
+
+  
+
+  it "is successful", vcr:{ record: :once} do
     expect(outcome).to be_success
     expect(result).to eq("bar")
   end
