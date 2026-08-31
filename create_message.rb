@@ -4,20 +4,14 @@ module Foobara
       inputs do
         channel_id :string, :required
         content :string, :required
-        api_token :string, default: -> { ENV["DISCORD_API_TOKEN"] }
       end
 
       result Message
 
       include HttpApiCommand
 
-      http_method :post
-      base_url "https://discord.com/api"
+      base_url "https://discord.com/api/"
       path { "/channels/#{channel_id}/messages" }
-      
-      def build_request_headers
-        self.request_headers = { "Content-Type" => "application/json", "Authorization" => "Bot #{api_token}" }
-      end
 
       def build_request_body
         self.request_body = {
