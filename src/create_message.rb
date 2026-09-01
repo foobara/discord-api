@@ -14,7 +14,7 @@ module Foobara
       http_method :post
       base_url "https://discord.com/api"
       path { "/channels/#{channel_id}/messages" }
-      
+
       def build_request_headers
         self.request_headers = { "Content-Type" => "application/json", "Authorization" => "Bot #{api_token}" }
       end
