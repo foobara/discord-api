@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://discord.com/api/channels/1544099347925303306/messages
+    uri: https://discord.com/api/channels/<SCRUBBED_DISCORD_CHANNEL_ID>/messages
     body:
       encoding: UTF-8
       string: '{"content":"Hello, World!"}'
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 31 Aug 2026 22:33:03 GMT
+      - Tue, 01 Sep 2026 18:35:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '4'
       X-Ratelimit-Reset:
-      - '1788215585'
+      - '1788287724'
       X-Ratelimit-Reset-After:
       - '1'
       X-Discord-Features:
@@ -52,27 +52,27 @@ http_interactions:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=86400
-      Cf-Cache-Status:
-      - DYNAMIC
       Set-Cookie:
       - "<SCRUBBED>"
       Content-Security-Policy:
       - frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to
         csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable
+      Reporting-Endpoints:
+      - csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"
+      Cf-Cache-Status:
+      - DYNAMIC
       X-Content-Type-Options:
       - nosniff
       Report-To:
-      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=SyEqUw06PTqnkP%2BvxhFKxTFg2RwGOvhVvER26dVCFVCNhTuorPVTopf4%2F9CaAyRjjrDqdvuSbiKHa7a345Zurfw94v0pZOiCv%2FCon9wJvJLSk36FyhKrpw%2B20%2Fvv"}]}'
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Md4DNQdw%2FaE90%2Beimk4SAEPsXp7OpVMLv6mcAfbyKJKUmqHpmLbLmN6riSQFUzqt34A7vhCdc0Gc7HuZOW9NOdVPBvu0%2BHDtpD9G7MlJ61d2NBieybAkc2JttxLs"}]}'
       Nel:
       - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
-      Reporting-Endpoints:
-      - csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"
       Cf-Ray:
-      - a33f7ea34ea21530-EZE
+      - a3465fd97b8c968c-EZE
     body:
       encoding: ASCII-8BIT
-      string: '{"type":0,"content":"Hello, World!","mentions":[],"mention_roles":[],"attachments":[],"embeds":[],"timestamp":"2026-08-31T22:33:03.317000+00:00","edited_timestamp":null,"flags":0,"components":[],"id":"1544112814967492681","channel_id":"1544099347925303306","author":{"id":"1544101931981742141","username":"Foobot","avatar":null,"discriminator":"9541","public_flags":0,"flags":0,"bot":true,"banner":null,"accent_color":null,"global_name":null,"avatar_decoration_data":null,"collectibles":null,"display_name_styles":null,"banner_color":null,"clan":null,"primary_guild":null},"pinned":false,"mention_everyone":false,"tts":false}
+      string: '{"type":0,"content":"Hello, World!","mentions":[],"mention_roles":[],"attachments":[],"embeds":[],"timestamp":"2026-09-01T18:35:22.670000+00:00","edited_timestamp":null,"flags":0,"components":[],"id":"1544415389344079877","channel_id":"<SCRUBBED_DISCORD_CHANNEL_ID>","author":{"id":"1544101931981742141","username":"Foobot","avatar":null,"discriminator":"9541","public_flags":0,"flags":0,"bot":true,"banner":null,"accent_color":null,"global_name":null,"avatar_decoration_data":null,"collectibles":null,"display_name_styles":null,"banner_color":null,"clan":null,"primary_guild":null},"pinned":false,"mention_everyone":false,"tts":false}
 
         '
-  recorded_at: Mon, 31 Aug 2026 22:33:03 GMT
+  recorded_at: Tue, 01 Sep 2026 18:35:23 GMT
 recorded_with: VCR 6.4.0

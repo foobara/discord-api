@@ -1,7 +1,8 @@
 require "vcr"
 
 VCR.configure do |config|
-  config.filter_sensitive_data("<SCRUBBED_DISCORD_API_TOKEN>") { ENV.fetch("DISCORD_API_TOKEN", nil) }
+  config.filter_sensitive_data("<SCRUBBED_DISCORD_API_TOKEN>") { ENV.fetch("DISCORD_API_TOKEN") }
+  config.filter_sensitive_data("<SCRUBBED_DISCORD_CHANNEL_ID>") { ENV.fetch("DISCORD_CHANNEL_ID") }
   # Scrubbing these by default just in-case they contain any sensitive data
   config.before_record do |interaction|
     if interaction.request.headers["Cookie"]
