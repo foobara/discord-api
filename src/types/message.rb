@@ -1,8 +1,8 @@
-require_relative 'user'
-require_relative 'role'
-require_relative 'attachment'
-require_relative 'embed'
-require_relative 'message/component'
+require_relative "user"
+require_relative "role"
+require_relative "attachment"
+require_relative "embed"
+require_relative "message/component"
 require_relative "message/type"
 
 module Foobara

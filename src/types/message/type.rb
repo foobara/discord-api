@@ -40,7 +40,6 @@ module Foobara
         PURCHASE_NOTIFICATION = 44
         POLL_RESULT = 46
       end
-
     end
   end
 end
