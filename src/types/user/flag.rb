@@ -1,6 +1,6 @@
 module Foobara
   module DiscordApi
-    class Flag < Foobara::Model
+    class User < Foobara::Model
       module FLAG
         STAFF = 0
         PARTNER = 1

@@ -14,6 +14,6 @@ RSpec.describe Foobara::DiscordApi::CreateMessage do
 
   it "is successful", vcr: { record: :once } do
     expect(outcome).to be_success
-    expect(result).to eq("bar")
+    expect(result).to be_a(Foobara::DiscordApi::Message)
   end
 end
