@@ -4,7 +4,7 @@ module Foobara
       inputs do
         channel_id :string, :required
         content :string, :required
-        api_token :string, default: -> { ENV["DISCORD_API_TOKEN"] }
+        api_token :string, :sensitive_exposed, default: -> { ENV["DISCORD_API_TOKEN"] }
       end
 
       result Message
@@ -34,9 +34,9 @@ module Foobara
       end
 
       # Comment out this three lines when testing new models or looking for new attributes.
-      def build_result
-        Message.new(response_body, ignore_unexpected_attributes: true)
-      end
+      # def build_result
+      #   Message.new(response_body, ignore_unexpected_attributes: true)
+      # end
     end
   end
 end
