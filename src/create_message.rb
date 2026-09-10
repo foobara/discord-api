@@ -20,23 +20,13 @@ module Foobara
       end
 
       def build_request_body
-        self.request_body = {
-
-          content:
-
-          # tts: false,
-          # embeds: [{
-          #   title: "Hello, Embed!",
-          #   description: "This is an embedded message."
-          # }]
-
-        }
+        self.request_body = { content: }
       end
 
       # Comment out this three lines when testing new models or looking for new attributes.
-      # def build_result
-      #   Message.new(response_body, ignore_unexpected_attributes: true)
-      # end
+      def build_result
+        Message.new(response_body, ignore_unexpected_attributes: true)
+      end
     end
   end
 end
