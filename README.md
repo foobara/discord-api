@@ -79,11 +79,20 @@ On success, `outcome.result` returns a `Foobara::DiscordApi::Message` with the f
 | --- | --- | --- |
 | `id` | String | The message's unique ID |
 | `channel_id` | String | The channel the message was sent to |
+| `type` | Integer | The message type |
 | `content` | String | The message content |
+| `mentions` | Array of `User` | Users mentioned in the message |
 | `timestamp` | DateTime | When the message was sent |
+| `edited_timestamp` | DateTime | When the message was last edited, or nil if never edited |
+| `flags` | Integer | Message flags |
 | `author` | `Foobara::DiscordApi::User` | The bot user that sent the message |
 | `pinned` | Boolean | Whether the message is pinned |
-| `type` | Integer | The message type |
+| `mention_everyone` | Boolean | Whether the message mentioned everyone |
+| `tts` | Boolean | Whether the message was a text-to-speech message |
+| `embeds` | Duckture | Embedded content in the message |
+| `components` | Duckture | Interactive components attached to the message |
+| `mention_roles` | Duckture | Roles mentioned in the message |
+| `attachments` | Duckture | Files attached to the message |
 
 The `author` attribute is a typed `Foobara::DiscordApi::User` object with its own attributes including `id`, `username`, `global_name`, `discriminator`, and `bot`.
 
