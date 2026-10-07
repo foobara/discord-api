@@ -13,6 +13,29 @@ Typical stuff: add `gem foobara-discord-api` to your Gemfile or .gemspec file. O
 
 To run `CreateMessage`, you'll need a Discord bot/Discord API token and a channel ID.
 
+#### How to get Discord bot token
+1) Go to the[Discord developer portal](https://discord.com/developers).
+2) Discord will ask you to log in or create an account.
+3) You need to create a new application.
+4) Choose the option "build a bot for your sever...".
+5) Enter the app name and press **create**.
+6) in the **Token** section, you need to press **Reset token** to generate a new token.
+7) Your Discord bot is ready!.
+
+#### How to add your bot to your Discord server
+1) In [Discord developer portal](https://discord.com/developers) go to your app.
+2) Go to **Installation**.
+3) Under **Guild install**, add **bot** to your scopes and select the permissions your bot needs.
+4) Save the changes.
+5) copy the **install link** and enter the URL in your browser. Then, select the server you want to add the bot to.
+6) Done! Your bot is now added to your server.
+
+#### How get the channel ID
+1) First, go to the Discord server where your bot has the permissions.
+2) Right click on the channel.
+3) you will see the **Copy channel ID** option, check it.
+4) Done! You now have everything you need.
+
 ### Send a message
 
 Require the gem and run the command with the destination channel ID and the message content:
