@@ -4,7 +4,7 @@ module Foobara
       inputs do
         channel_id :string, :required
         content :string, :required
-        api_token :string, :sensitive_exposed, default: -> { ENV["DISCORD_API_TOKEN"] }
+        api_token :string, :sensitive, default: -> { ENV["DISCORD_API_TOKEN"] }
       end
 
       result Message
