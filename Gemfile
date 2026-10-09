@@ -5,12 +5,14 @@ ruby Foobara::DiscordApi::MINIMUM_RUBY_VERSION
 
 gemspec
 
+# gem "foobara", path: "../foobara"
+
 gem "foobara-dotenv-loader", "< 2.0.0"
 
 gem "rake"
 
 group :development do
-  gem "foob"
+  gem "foob" # , path: "../foob"
   gem "foobara-rubocop-rules", ">= 1.0.0"
   gem "guard-rspec"
   gem "rubocop-rake"
@@ -20,8 +22,7 @@ end
 group :development, :test do
   gem "pry"
   gem "pry-byebug"
-  # TODO: Just adding this to suppress warnings seemingly coming from pry-byebug. Can probably remove this once
-  # pry-byebug has irb as a gem dependency
+  # Temporarily needed by foob but foob incorrectly doesn't list it as a dependency
   gem "irb"
 end
 
